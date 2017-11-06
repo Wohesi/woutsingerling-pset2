@@ -16,13 +16,16 @@ public class editScreen extends AppCompatActivity {
         Intent intent = getIntent();
         String recievedText = intent.getStringExtra("ourText");
 
-        TextView textView = (TextView) findViewById(R.id.textView2);
+        TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(recievedText);
     }
 
 
     public void newStoryButton (View view) {
         Intent storyScreen = new Intent(this, storyScreen.class);
+
+        // use clear from story.java
+
         startActivity(storyScreen);
         finish();
 
