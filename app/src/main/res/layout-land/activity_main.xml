@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.gebruiker.madlibs.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:text="Mad libs"
+            android:textSize="42sp"
+            tools:layout_editor_absoluteX="214dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/discription"
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:layout_weight="0.7"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam massa mauris, aliquam sit amet feugiat at, dapibus eget sapien. Morbi a turpis et tortor aliquet gravida a id risus. Nulla mattis lacinia ex et elementum. Maecenas maximus odio elit, a ullamcorper orci viverra a. Suspendisse tincidunt consequat nunc. Vivamus suscipit vestibulum metus, a dignissim arcu sollicitudin quis. Aenean justo quam, dapibus ullamcorper massa eu, volutpat egestas sapien. Aliquam commodo, libero id sollicitudin laoreet, tellus leo efficitur quam,"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="88dp" />
+
+        <Button
+            android:id="@+id/getStarted"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:text="Get started"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="472dp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
