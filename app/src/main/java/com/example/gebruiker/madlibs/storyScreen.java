@@ -8,26 +8,28 @@ import android.widget.EditText;
 
 public class storyScreen extends AppCompatActivity {
 
+    Story currentStory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_story_screen);
 
-        Intent story = getIntent();
-        Story currentStory = story.getIntent("story1");
+        Intent intent = getIntent();
+        currentStory = (Story) intent.getSerializableExtra("story1");
 
     }
 
     public void editButton (View view) {
 
-        //fillInPlaceholder
-
-        //getNextPlaceholder
+        //currentStory.getNextPlaceholder();
 
         //getPlaceholderCount
+        //currentStory.getPlaceholderCount();
+
 
         //getPlaceholderRemainingCount
+        //currentStory.getPlaceholderRemainingCount();
 
         //isFilledIn --> if true all placeholders are filled in.
 
@@ -35,8 +37,17 @@ public class storyScreen extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.editText);
         String text = editText.getText().toString();
 
+        //fillInPlaceholder
+        currentStory.fillInPlaceholder(text);
+
+        //getNextPlaceholder
+        currentStory.getNextPlaceholder();
+
+
+
         Intent editScreen = new Intent(this, editScreen.class);
         editScreen.putExtra("ourText", text);
+
         startActivity(editScreen);
     }
 }
