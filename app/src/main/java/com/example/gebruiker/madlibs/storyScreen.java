@@ -22,8 +22,6 @@ public class storyScreen extends AppCompatActivity {
 
     public void editButton (View view) {
 
-        //currentStory.getNextPlaceholder();
-
         //getPlaceholderCount
         //currentStory.getPlaceholderCount();
 
@@ -31,8 +29,8 @@ public class storyScreen extends AppCompatActivity {
         //getPlaceholderRemainingCount
         //currentStory.getPlaceholderRemainingCount();
 
-        //isFilledIn --> if true all placeholders are filled in.
-
+        //getNextPlaceholder
+        currentStory.getNextPlaceholder();
 
         EditText editText = (EditText) findViewById(R.id.editText);
         String text = editText.getText().toString();
@@ -40,8 +38,16 @@ public class storyScreen extends AppCompatActivity {
         //fillInPlaceholder
         currentStory.fillInPlaceholder(text);
 
-        //getNextPlaceholder
-        currentStory.getNextPlaceholder();
+        //iif true all placeholders are filled in, and the story can be made.
+        if (currentStory.isFilledIn()) {
+            Intent intent = new Intent(this, editScreen.class);
+            intent.putExtra("story", currentStory.toString());
+            startActivity(intent);
+            finish();
+
+        }
+
+
 
 
 

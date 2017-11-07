@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 public class editScreen extends AppCompatActivity {
 
+    Story currentStory;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +20,8 @@ public class editScreen extends AppCompatActivity {
 
         TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(recievedText);
+
+
     }
 
 
