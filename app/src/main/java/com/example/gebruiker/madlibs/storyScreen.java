@@ -20,7 +20,6 @@ public class storyScreen extends AppCompatActivity {
 
         EditText editText = (EditText) findViewById(R.id.editText);
         editText.setHint(currentStory.getNextPlaceholder());
-
     }
 
     public void editButton (View view) {
@@ -34,18 +33,28 @@ public class storyScreen extends AppCompatActivity {
         editText.setText("");
         editText.setHint(currentStory.getNextPlaceholder());
 
-
         //if true all placeholders are filled in, and the story can be made.
         if (currentStory.isFilledIn()) {
             Intent intent = new Intent(this, editScreen.class);
             intent.putExtra("story", currentStory.toString());
             startActivity(intent);
             finish();
-
         }
+    }
+    /*
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("word", editText.getText());
+    }
 
+    @Override
+    protected void onRestoreInstanceState(Bundle inState) {
+        super.onRestoreInstanceState(inState);
+        editText.setText(inState.getText("word"));
 
     }
+    */
 }
 
 

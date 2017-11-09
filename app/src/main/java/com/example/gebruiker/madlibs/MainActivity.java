@@ -27,6 +27,15 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view) {
         Button selectedStory = (Button) view;
         switch(selectedStory.getId()) {
+            case R.id.simple:
+                try {
+                    is = getAssets().open("madlib0_simple.txt");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+
+                story = new Story(is);
+                break;
             case R.id.tarzan:
                 try {
                     is = getAssets().open("madlib1_tarzan.txt");
@@ -71,20 +80,5 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    /*
-    public void tarzan (View view) {
-        Intent storyScreen = new Intent(this, storyScreen.class);
-
-        storyScreen.putExtra("story1",story1);
-
-        startActivity(storyScreen);
-        finish();
-    }
-
-    public void university(View view) {
-        Intent storyScreen = new Intent(this, storyScreen.class);
-        storyScreen.putExtra("story2",story2);
-    }
-    */
 }
 
