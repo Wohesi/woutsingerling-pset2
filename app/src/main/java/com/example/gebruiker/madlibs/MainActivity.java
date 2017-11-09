@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(View view) {
         Button selectedStory = (Button) view;
+        // cases for each story.
         switch(selectedStory.getId()) {
             case R.id.simple:
                 try {
@@ -73,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 story = new Story(is);
                 break;
         }
-
+        // intent to give the correct story to the next screen
         Intent storyScreen = new Intent(this, storyScreen.class);
         storyScreen.putExtra("story",story);
         startActivity(storyScreen);

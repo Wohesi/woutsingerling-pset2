@@ -8,31 +8,24 @@ import android.widget.TextView;
 
 public class editScreen extends AppCompatActivity {
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_screen);
 
+        // get the story
         Intent intent = getIntent();
         String recievedText = intent.getStringExtra("story");
 
+        // set the text view to the story
         TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(recievedText);
-
-
     }
-
 
     public void newStoryButton (View view) {
         Intent main = new Intent(this, MainActivity.class);
-
-        // use clear from story.java
-
         startActivity(main);
         finish();
-
-
     }
 }
 
