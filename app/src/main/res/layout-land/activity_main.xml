@@ -37,6 +37,8 @@
             android:text="Get started"
             tools:layout_editor_absoluteX="27dp"
             tools:layout_editor_absoluteY="472dp" />
+
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

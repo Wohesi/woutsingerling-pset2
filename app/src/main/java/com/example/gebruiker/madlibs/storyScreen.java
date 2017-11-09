@@ -16,21 +16,14 @@ public class storyScreen extends AppCompatActivity {
         setContentView(R.layout.activity_story_screen);
 
         Intent intent = getIntent();
-        currentStory = (Story) intent.getSerializableExtra("story1");
+        currentStory = (Story) intent.getSerializableExtra("story");
+
+        EditText editText = (EditText) findViewById(R.id.editText);
+        editText.setHint(currentStory.getNextPlaceholder());
 
     }
 
     public void editButton (View view) {
-
-        //getPlaceholderCount
-        //currentStory.getPlaceholderCount();
-
-
-        //getPlaceholderRemainingCount
-        //currentStory.getPlaceholderRemainingCount();
-
-        //getNextPlaceholder
-        currentStory.getNextPlaceholder();
 
         EditText editText = (EditText) findViewById(R.id.editText);
         String text = editText.getText().toString();
@@ -38,7 +31,11 @@ public class storyScreen extends AppCompatActivity {
         //fillInPlaceholder
         currentStory.fillInPlaceholder(text);
 
-        //iif true all placeholders are filled in, and the story can be made.
+        editText.setText("");
+        editText.setHint(currentStory.getNextPlaceholder());
+
+
+        //if true all placeholders are filled in, and the story can be made.
         if (currentStory.isFilledIn()) {
             Intent intent = new Intent(this, editScreen.class);
             intent.putExtra("story", currentStory.toString());
@@ -48,13 +45,6 @@ public class storyScreen extends AppCompatActivity {
         }
 
 
-
-
-
-        Intent editScreen = new Intent(this, editScreen.class);
-        editScreen.putExtra("ourText", text);
-
-        startActivity(editScreen);
     }
 }
 

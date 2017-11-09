@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 public class editScreen extends AppCompatActivity {
 
-    Story currentStory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +15,7 @@ public class editScreen extends AppCompatActivity {
         setContentView(R.layout.activity_edit_screen);
 
         Intent intent = getIntent();
-        String recievedText = intent.getStringExtra("ourText");
+        String recievedText = intent.getStringExtra("story");
 
         TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(recievedText);
@@ -26,12 +25,16 @@ public class editScreen extends AppCompatActivity {
 
 
     public void newStoryButton (View view) {
-        Intent storyScreen = new Intent(this, storyScreen.class);
+        Intent main = new Intent(this, MainActivity.class);
 
         // use clear from story.java
 
-        startActivity(storyScreen);
+        startActivity(main);
         finish();
+
 
     }
 }
+
+
+

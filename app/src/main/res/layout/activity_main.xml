@@ -32,14 +32,46 @@
             tools:layout_editor_absoluteY="88dp" />
 
         <Button
-            android:id="@+id/getStarted"
+            android:id="@+id/tarzan"
             android:layout_width="match_parent"
             android:layout_height="79dp"
             android:layout_weight="0.05"
-            android:onClick="getStarted"
-            android:text="Get started"
+            android:onClick="onClick"
+            android:text="Tarzan Story"
             tools:layout_editor_absoluteX="27dp"
             tools:layout_editor_absoluteY="472dp" />
+
+        <Button
+            android:id="@+id/university"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_weight="0.05"
+            android:onClick="onClick"
+            android:text="University Story"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="472dp" />
+
+        <Button
+            android:id="@+id/clothes"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_weight="0.05"
+            android:onClick="onClick"
+            android:text="Clothes Story"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="472dp" />
+
+        <Button
+            android:id="@+id/dance"
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_weight="0.05"
+            android:onClick="onClick"
+            android:text="Dance Story"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="472dp" />
+
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
